@@ -58,6 +58,97 @@ a {
     color: var(--main-bg-color)
 }
 
+body{
+  margin: 0%;
+}
+
+
+
+/* Header */
+
+.Booki-icon{
+  width: 70px;
+  height: 20px;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;  
+}
+
+nav img, nav a{
+  padding-top: 10px;
+
+}
+
+nav a{
+  margin-left: 30px;
+}
+
+nav a:active{
+  border-top: 4px solid #0065FC;
+  color: #0065FC;
+}
+
+header{
+  padding-bottom: 50px;
+}
+
+
+/* Description + Search bar  */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 377px;
+  height: 49px;
+  margin-bottom: 30px;
+}
+
+.fa-location-dot {
+  color: black;
+  width: 50px;
+  height: 100%;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.search {
+  width: 147px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border: 1px solid #F2F2F2; 
+  border-left: none;
+  border-right: none; 
+}
+
+.Rechercher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background: blue;
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 132px;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+ }
+
+ 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -119,40 +210,6 @@ a {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
-}
-
-.Booki-icon{
-  width: 70px;
-  height: 20px;
-}
-
-nav{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;  
-}
-
-nav img, nav a{
-  padding-top: 10px;
-
-}
-
-nav a{
-  margin-left: 30px;
-}
-
-nav a:active{
-  border-top: 4px solid #0065FC;
-  color: #0065FC;
-}
-
-body{
-  margin: 0%;
-}
-
-header{
-  padding-bottom: 20px;
 }
 
 
