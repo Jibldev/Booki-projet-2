@@ -173,6 +173,10 @@ header{
 
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les éléments */
+    box-sizing: border-box; /* Inclus padding et border dans la largeur totale */
 }
 
 .cases{
