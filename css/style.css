@@ -13,9 +13,14 @@
   color: var(--main-color);
 }
 
-body {
+html, body {
   display: flex;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+img, section, div {
+  max-width: 100%; /* Empêche les éléments de déborder */
 }
 
 .main-container {
@@ -59,9 +64,6 @@ a {
   color: var(--main-bg-color);
 }
 
-body {
-  margin: 0%;
-}
 
 /* Header */
 
@@ -94,6 +96,7 @@ nav a:active {
 header {
   padding-bottom: 50px;
 }
+
 
 /* Description + Search bar  */
 
@@ -146,16 +149,46 @@ header {
   cursor: pointer;
 }
 
+.Queriesrecherche {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  background: #0065fc;
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.356);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.fa-magnifying-glass {
+  width: 40px;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 /***** Filtres *****/
 
 .filtres {
   font-family: "Raleway", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 10px;
 }
 
-.mediafiltres{
+.mediafiltres {
   display: flex;
   gap: 10px;
 }
@@ -179,10 +212,6 @@ header {
 
 .circle:hover {
   background: #deebff;
-}
-
-.circle:active {
-  background: #0065fce5;
 }
 
 .fa-person {
@@ -406,12 +435,11 @@ th {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-
-  .filtres{
+  .filtres {
     display: flex;
     flex-direction: column;
   }
-  .mediaflitres{
+  .mediaflitres {
     display: flex;
   }
 
@@ -446,17 +474,156 @@ th {
     font-size: 13px;
   }
 
-  .activclass img{
+  .activclass img {
     max-height: 200px;
-
   }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
   .main-container {
-    padding: 0%;
+    width: 100%;
+    padding: 0 0;
+    margin: 0;
   }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+  .Booki-icon {
+    margin-bottom: 20px;
+  }
+
+  /***** Header *****/
+
+  .header a {
+    width: 50%;
+  }
+
+  nav {
+    justify-content: space-between; 
+    width: 100%; /* prend toute la largeur */
+    max-width: 100%; /* Limite la largeur à 100% */
+  }
+
+  nav a {
+    margin-left: 0; 
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header a{
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+  }
+
+  .header a:hover {
+    color: #0065fc;
+    border-bottom: 2px solid #0065fc;
+  }
+
+  /***** Description/search bar *****/
+
+  .Description p,
+  .section-title {
+    display: flex;
+    margin-left: 10px;
+  }
+
+  .Description {
+    margin-left: 10px;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .search{
+    width: 50%;
+  }
+
+  .Rechercher {
+    display: none;
+  }
+
+  .Queriesrecherche {
+    visibility: visible;
+    display: block;
+  }
+
+  /****** Filtres *******/
+
+.filtres{
+  margin-left: 20px;
+}
+
+  .circle {
+    min-width: 110px; /* Ajuste la largeur pour petits écrans */
+    min-height: 25px; /* Ajuste la hauteur pour petits écrans */
+  }
+
+
+  .fa-money-bill-wave,
+  .fa-person,
+  .fa-heart,
+  .fa-fire {
+    font-size: 16px;
+  }
+  
+  .economique, .fam, .romance, .pepi {
+    margin-left: 8px;
+    color: black;
+  }
+  
+  .mediafiltres{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /***** Infos *****/
+
+  .info{
+    margin-left: 10px;
+  }
+
+  /***** Placement Populaires et hébergements *****/
+
+  .hebergements-and-populaires{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .populaires{
+    order: 1;
+  }
+
+  .hebergements{
+    order: 2;
+  }
+
+  /***** Populaires *****/
 
   .populaires-cards {
     display: flex;
@@ -467,42 +634,88 @@ th {
     width: 100%;
   }
 
-  nav {
+/***** Hébergements *****/
+
+.hebergements-and-populaires .hebergements{
+  background-color: white;
+}
+
+.hebergements-and-populaires .cases{
+  background-color: white;
+}
+  .caserow{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
   }
 
-  nav a {
-    margin: 0px;
-    text-align: center;
-  }
-
-  .Booki-icon {
-    margin-bottom: 20px;
-  }
-
-  nav a:hover {
-    border: none;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #0065fc;
-  }
-
-  .header {
+  .caserow .card {
+    width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
+  }
+
+  .caserow-cards a {
     width: 100%;
   }
 
-  .header a {
-    width: 50%;
+  /***** Activités *****/
+
+  .acti{
+    display: flex;
+    flex-direction: column;
+  }
+  .activites{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
   }
 
-  .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 0px;
-    padding: 30px;
-    box-sizing: border-box;
+  .activclass{
+    width: 90%;
+    max-width: 90%;
   }
+
+  /***** Footer *****/
+
+  .footer-section{
+    background-color: white;
+  }
+
+  .footer-section-mobile{
+    background-color: var(--main-bg-color);
+  }
+
+ /* On masque le tableau pour petit écran */
+ table {
+  display: none;
+}
+
+/* Création d'une structure en bloc pour les petits écrans */
+.footer-section-mobile {
+  display: block !important;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.footer-section-mobile .section {
+  margin-bottom: 20px; /* Espace entre les sections */
+}
+
+.footer-section-mobile h3 {
+  font-size: 18px; /* Titre de chaque section */
+  font-weight: bold;
+}
+
+.footer-section-mobile ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section-mobile li {
+  margin-bottom: 10px; /* Espace entre les liens */
+}
 
   /* ... */
 }

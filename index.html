@@ -46,34 +46,39 @@
           <i class="fa-solid fa-location-dot"></i>
           <input type="text" placeholder="Marseille, France" class="search" />
           <button class="Rechercher"><strong>Rechercher</strong></button>
+          <button class="Queriesrecherche">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </form>
 
         <div class="filtres">
-          <p><strong>Filtres</strong></p>
+          <p class="filtretxt"><strong>Filtres</strong></p>
           <div class="mediafiltres">
-              <a href="#">
-                  <div class="circle">
-                      <i class="fa-solid fa-money-bill-wave">
-                          <p class="economique">Économique</p></i
-                          >
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="circle">
-                            <i class="fa-solid fa-person"> <p class="fam">Familial</p></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="circle">
-                            <i class="fa-solid fa-heart"><p class="romance">Romantique</p></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="circle">
-                            <i class="fa-solid fa-fire"><p class="pepi">Nos pépites</p></i>
-                        </div>
-                    </a>
-                </div>
+            <a href="#">
+              <div class="circle">
+                <i class="fa-solid fa-money-bill-wave">
+                  <p class="economique">Économique</p></i
+                >
+              </div>
+            </a>
+            <a href="#">
+              <div class="circle">
+                <i class="fa-solid fa-person"> <p class="fam">Familial</p></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="circle">
+                <i class="fa-solid fa-heart"
+                  ><p class="romance">Romantique</p></i
+                >
+              </div>
+            </a>
+            <a href="#">
+              <div class="circle">
+                <i class="fa-solid fa-fire"><p class="pepi">Nos pépites</p></i>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div class="info">
@@ -482,6 +487,7 @@
         </div>
       </main>
       <footer>
+        <!-- Version pour grand écran (tableau) -->
         <div class="footer-section">
           <table>
             <thead>
@@ -501,15 +507,42 @@
                 <td><a href="#">Conditions générales</a></td>
                 <td><a href="#">Proposer votre hôtel</a></td>
                 <td><a href="#">Nous contacter</a></td>
-
               </tr>
               <tr>
-                <td><a href="#">Données et confidentialité </a></td>
+                <td><a href="#">Données et confidentialité</a></td>
                 <td></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Version pour media queries -->
+        <div class="footer-section-mobile" style="display: none">
+          <div class="section">
+            <h3>A propos</h3>
+            <ul>
+              <li><a href="#">Fonctionnement du site</a></li>
+              <li><a href="#">Conditions générales</a></li>
+              <li><a href="#">Données et confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Nos hébergements</h3>
+            <ul>
+              <li><a href="#">Charte qualité</a></li>
+              <li><a href="#">Proposer votre hôtel</a></li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Assistance</h3>
+            <ul>
+              <li><a href="#">Centre d'aide</a></li>
+              <li><a href="#">Nous contacter</a></li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>
