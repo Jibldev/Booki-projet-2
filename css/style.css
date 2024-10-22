@@ -636,27 +636,36 @@ th {
 
 /***** Hébergements *****/
 
-.hebergements-and-populaires .hebergements{
+.caserow .card, .hebergements a {
+  width: 100vw; /* Adapte les éléments à 100% de la largeur visible */
+}
+
+.hebergements-and-populaires .hebergements {
+  background-color: white;
+  width: 100%; /* Adapte la section à la largeur disponible */
+  box-sizing: border-box;
+}
+
+.hebergements-and-populaires .cases {
   background-color: white;
 }
 
-.hebergements-and-populaires .cases{
-  background-color: white;
-}
-
-.caserow{
+.caserow {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
-  .caserow .card {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+
+.hebergements .caserow .card {
+  width: 100%; /* Adapte les cartes à la largeur du conteneur parent */
+  box-sizing: border-box;
+}
+
+.hebergements a {
+  width: 100%; /* Adapte les liens à toute la largeur */
+}
+
 
   /***** Activités *****/
 
@@ -717,3 +726,5 @@ th {
 
   /* ... */
 }
+
+
