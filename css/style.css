@@ -280,6 +280,7 @@ img {
   width: 158px;
   height: 200px;
 }
+
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
@@ -542,22 +543,18 @@ th {
   .Description p,
   .section-title {
     display: flex;
-    margin-left: 10px;
-  }
-
-  .Description {
-    margin-left: 10px;
+    margin-left: 30px;
   }
 
   .search-bar {
     display: flex;
     justify-content: center;
-    margin-left: 10px;
     margin-top: 20px;
+    margin-left: 5px;
   }
 
   .search{
-    width: 50%;
+    width: 60%;
   }
 
   .Rechercher {
@@ -636,14 +633,15 @@ th {
 
 /***** Hébergements *****/
 
-.caserow .card, .hebergements a {
-  width: 100vw; /* Adapte les éléments à 100% de la largeur visible */
+.caserow .card, .hebergements {
+  width: 100%; /* Adapte les éléments à 100% de la largeur visible */
 }
 
 .hebergements-and-populaires .hebergements {
   background-color: white;
-  width: 100%; /* Adapte la section à la largeur disponible */
-  box-sizing: border-box;
+  width: 100% ;
+  padding: 0;
+  margin-top: 30px;
 }
 
 .hebergements-and-populaires .cases {
@@ -654,19 +652,11 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-.hebergements .caserow .card {
-  width: 100%; /* Adapte les cartes à la largeur du conteneur parent */
-  box-sizing: border-box;
+.caserow .hebergements{
+  display: flex;
 }
-
-.hebergements a {
-  width: 100%; /* Adapte les liens à toute la largeur */
-}
-
-
   /***** Activités *****/
 
   .acti{
