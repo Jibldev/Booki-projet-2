@@ -622,6 +622,10 @@ th {
     width: 100%;
   }
 
+  .populaires-title{
+    margin-left: -25px;
+  }
+
   /***** Hébergements *****/
 
   .caserow .card,
@@ -649,6 +653,11 @@ th {
   .caserow .hebergements {
     display: flex;
   }
+
+  .plus{
+    margin-top: -10px;
+  }
+
   /***** Activités *****/
 
   .acti {
