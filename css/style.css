@@ -15,7 +15,6 @@
 
 html,
 body {
-  display: flex;
   margin: 0;
   padding: 0;
 }
@@ -540,6 +539,7 @@ th {
   .header a:hover {
     color: #0065fc;
     border-bottom: 2px solid #0065fc;
+    border-top: none;
   }
 
   nav a {
@@ -592,16 +592,13 @@ th {
 
   /* Style des boutons */
   .circle {
-    width: 90%; /* Chaque bouton prend toute la largeur de sa colonne */
-    padding: 10px;
     display: flex;
-    justify-content: center;
-    border-radius: 50px;
-  }
-
-  .circle {
+    width: 90%; /* Chaque bouton prend toute la largeur de sa colonne */
     min-width: 110px; /* Ajuste la largeur pour petits écrans pour "Familial" */
     min-height: 25px; /* Ajuste la hauteur pour petits écrans pour "Familial" */
+    padding: 10px;
+    justify-content: center;
+    border-radius: 50px;
   }
 
   .fa-money-bill-wave,
