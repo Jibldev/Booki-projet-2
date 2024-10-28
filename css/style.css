@@ -586,14 +586,13 @@ th {
   .mediafiltres {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
-    gap: 20px;
-    width: 300px;
+    gap: 10px;
   }
 
   /* Style des boutons */
   .circle {
     display: flex;
-    width: 90%; /* Chaque bouton prend toute la largeur de sa colonne */
+    width: 80%; /* Chaque bouton prend toute la largeur de sa colonne */
     min-width: 110px; /* Ajuste la largeur pour petits écrans pour "Familial" */
     min-height: 25px; /* Ajuste la hauteur pour petits écrans pour "Familial" */
     padding: 10px;
